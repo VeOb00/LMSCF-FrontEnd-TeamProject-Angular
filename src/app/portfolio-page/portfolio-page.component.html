@@ -1,0 +1,11 @@
+<div class="container">
+    <figure class="figure col-sm-6 col-md-4" *ngFor="let photo of photos ; index as portfolioPhotoId">
+        <div class="img-container">
+            <img src="{{photo.image}}" class="figure-img img-fluid rounded" alt="...">
+        </div>
+        <figcaption class="figure-caption">
+            <p class="text-center text-uppercase">{{photo.caption}}</p>
+            <p class="text-center small">{{photo.placeTaken}}</p>
+        </figcaption>
+    </figure>
+</div>
