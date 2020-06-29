@@ -15,7 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomePageComponent,
     PortfolioPageComponent,
     AboutPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
     NavbarComponent
   ],
   imports: [
