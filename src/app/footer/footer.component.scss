@@ -12,7 +12,14 @@ a {
 
 i {
     color: #899878;
-    padding: 1vw;
+    padding-inline-start: 1vw;
+}
+i:hover {
+    color: black;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid #899878;
 }
 
 .wrapper {

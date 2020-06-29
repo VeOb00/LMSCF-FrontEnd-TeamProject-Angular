@@ -1,6 +1,10 @@
 
     <div class="container wrapper">
-        <ul class="nav justify-content-center">
+         <ul class="nav justify-content-center mb-3">
+        <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active" >{{projectName}}</a>
+
+       
+
             <li class="nav-item">
               <a class="nav-link active" [routerLink]="['/portfolio']" routerLinkActive="router-link-active" >Portfolio</a>
             </li>
@@ -18,7 +22,7 @@
               <a href=""> <i class="fa fa-twitter" aria-hidden="true"> </i></a>
               <a href=""> <i class="fa fa-instagram" aria-hidden="true"> </i></a>
               <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              <span>|</span>
+              <span> |</span>
               <a href=""> <i class="fa fa-envelope-o" aria-hidden="true"></i></a>
               
               <a href=""><i class="fa fa-share" aria-hidden="true"></i></a>
