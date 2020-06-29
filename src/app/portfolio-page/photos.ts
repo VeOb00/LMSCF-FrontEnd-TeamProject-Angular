@@ -19,9 +19,11 @@ class Photography {
     display() {}
 }
 
-photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "portrait", "../../assets/img/portfolio/photo (1).jpg"));
+photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "still", "../../assets/img/portfolio/photo (1).jpg"));
 photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "portrait", "../../assets/img/portfolio/photo (2).jpg"));
-photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "portrait", "../../assets/img/portfolio/photo (3).jpg"));
-photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "portrait", "../../assets/img/portfolio/photo (4).jpg"));
-photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "portrait", "../../assets/img/portfolio/photo (5).jpg"));
-photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "portrait", "../../assets/img/portfolio/photo (6).jpg"));
+photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "animal", "../../assets/img/portfolio/photo (3).jpg"));
+photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "still", "../../assets/img/portfolio/photo (4).jpg"));
+photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "landscape", "../../assets/img/portfolio/photo (5).jpg"));
+photos.push(new Photography("The image", new Date(2020, 8, 1), "Vienna, Austria", "landscape", "../../assets/img/portfolio/photo (6).jpg"));
+
+
