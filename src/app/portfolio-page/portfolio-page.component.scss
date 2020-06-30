@@ -39,6 +39,9 @@ $bootstrap-xl: 1200px;
     }
   }
 }
+figure img:hover {
+    cursor: pointer;
+}
 
 
 // html,
@@ -49,13 +52,14 @@ $bootstrap-xl: 1200px;
 
 /* Full Page Carousel itself*/
 
+
 .modal-dialog {
-    // width: 100vw;
     height: 80vh;
 }
 
 .carousel {
   height: 80vh;
+
 }
 
 .carousel .carousel-inner {
