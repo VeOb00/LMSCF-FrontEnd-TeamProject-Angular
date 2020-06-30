@@ -41,3 +41,34 @@ $bootstrap-xl: 1200px;
 }
 
 
+// html,
+// body,
+// .view {
+//   height: 100vh;
+// }
+
+/* Full Page Carousel itself*/
+
+.modal-dialog {
+    // width: 100vw;
+    height: 80vh;
+}
+
+.carousel {
+  height: 80vh;
+}
+
+.carousel .carousel-inner {
+  height: 80vh;
+}
+
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  height: 80vh;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
