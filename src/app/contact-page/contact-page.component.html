@@ -1,34 +1,32 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6">
-
-            <div class="google-container">
-                <div class="main-space">
-                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=codefactory&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div>
-
+<div class="container mt-5">
+  <p class="text-center mb-4 display-3">Contact Us</p>
+    <div class="row shadow-lg justify-content-between">
+        <div class="col-sm-12 col-md-12 col-lg-6 p-3">
+            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=codefactory&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         </div>
-        <div class="col-6">
-            <h2 class="text-center mb-4">Contact Us</h2>
-            <form>
+        <div class="col-sm-12 col-md-12 col-lg-6 p-3">
+            <form [formGroup]="contactInfo" (ngSubmit)="submitInfo()">
               <div class="form-group">
                 <div class="row">
                   <div class="col">
-                    <label>First Name :</label>
-                    <input type="text" class="form-control">
+                    <label>First Name <b>*</b></label>
+                    <input type="text" class="form-control rounded-0" formControlName="firstName">
                   </div>
                   <div class="col">
-                    <label>Last Name :</label>
-                    <input type="text" class="form-control">
+                    <label>Last Name <b>*</b></label>
+                    <input type="text" class="form-control rounded-0" formControlName="lastName">
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col">
-                    <label>Email :</label>
-                    <input type="email" class="form-control">
+                    <label>Email <b>*</b></label>
+                    <input type="email" class="form-control rounded-0" formControlName="email">
+                  </div>
+                  <div class="col">
+                    <label>Phone</label>
+                    <input type="text" class="form-control rounded-0" formControlName="phone">
                   </div>
                 </div>
               </div>
@@ -36,17 +34,43 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col">
-                    <label>Subject :</label>
-                    <input type="text" class="form-control">
+                    <label>Subject <b>*</b></label>
+                    <input type="text" class="form-control rounded-0" formControlName="subject">
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label>Message :</label>
-                <textarea type="text" class="form-control" rows="3"></textarea>
+                <label>Message <b>*</b></label>
+                <textarea type="text" class="form-control rounded-0" rows="6" formControlName="message"></textarea>
               </div>
+              <button type="submit" class="btn btn-dark border-0" data-toggle="modal" data-target="#main-modal">Send</button>
+              <small class="text-muted ml-3"><b>*</b> Required Fields</small>
             </form>
-            
         </div>
     </div>
+    
 </div>
+
+
+
+
+
+
+<div class="modal fade" id="main-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">{{modalTitle}}</h5>
+        
+      </div>
+      <div class="modal-body">
+        <p id="modal-text">{{modalText}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
