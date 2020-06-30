@@ -1,70 +1,89 @@
+<!-- ******** CONTAINER ********** -->
 <div class="container mt-5">
-  <p class="text-center mb-4 display-3">Contact Us</p>
-    <div class="row shadow-lg justify-content-between">
+  <p class="text-center mb-4 display-4">Contact Us</p>
+  <p class="lead text-center">Feel free to contact us! We will get back to you as soon as possible.</p>
+  <hr>
+    <div class="row justify-content-between">
         <div class="col-sm-12 col-md-12 col-lg-6 p-3">
+
+<!-- ******** GOOGLE-MAPS ********** -->
+
+          <div class="mr-sm-0 mr-md-0 mr-md-3 google-maps shadow">
             <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=codefactory&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 p-3">
+          <div class="ml-sm-0 ml-md-0 ml-md-3">
+
+<!-- ******** GOOGLE-MAPS-END ****** -->
+<!-- ******** FORM ***************** -->
+
             <form [formGroup]="contactInfo" (ngSubmit)="submitInfo()">
               <div class="form-group">
                 <div class="row">
                   <div class="col">
-                    <label>First Name <b>*</b></label>
-                    <input type="text" class="form-control rounded-0" formControlName="firstName">
+                    <label class="text-muted h6"><b>*</b> First Name</label>
+                    <input type="text" class="form-control form-control-sm rounded-0" formControlName="firstName">
                   </div>
                   <div class="col">
-                    <label>Last Name <b>*</b></label>
-                    <input type="text" class="form-control rounded-0" formControlName="lastName">
+                    <label class="text-muted h6"><b>*</b> Last Name</label>
+                    <input type="text" class="form-control form-control-sm rounded-0" formControlName="lastName">
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col">
-                    <label>Email <b>*</b></label>
-                    <input type="email" class="form-control rounded-0" formControlName="email">
+                    <label class="text-muted h6"><b>*</b> E-Mail</label>
+                    <input type="email" class="form-control form-control-sm rounded-0" formControlName="email">
                   </div>
                   <div class="col">
-                    <label>Phone</label>
-                    <input type="text" class="form-control rounded-0" formControlName="phone">
+                    <label class="text-muted h6"><b>&nbsp;</b> Phone</label>
+                    <input type="text" class="form-control form-control-sm rounded-0" formControlName="phone">
                   </div>
                 </div>
               </div>
-              <hr>
               <div class="form-group">
                 <div class="row">
                   <div class="col">
-                    <label>Subject <b>*</b></label>
-                    <input type="text" class="form-control rounded-0" formControlName="subject">
+                    <label class="text-muted h6"><b>*</b> Subject</label>
+                    <input type="text" class="form-control form-control-sm rounded-0" formControlName="subject">
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label>Message <b>*</b></label>
-                <textarea type="text" class="form-control rounded-0" rows="6" formControlName="message"></textarea>
+                <label class="text-muted h6"><b>*</b> Message</label>
+                <textarea type="text" class="form-control form-control-sm rounded-0" rows="6" formControlName="message"></textarea>
               </div>
-              <button type="submit" class="btn btn-dark border-0" data-toggle="modal" data-target="#main-modal">Send</button>
+              <button type="submit" class="btn btn-dark border-0 w-25" data-toggle="modal" data-target="#main-modal">Send</button>
               <small class="text-muted ml-3"><b>*</b> Required Fields</small>
             </form>
+
+<!-- ******** FORM-END ************** -->
+
+          </div>
         </div>
     </div>
-    
+    <hr>
 </div>
 
-
-
-
-
+<!-- ******** CONTAINER-END ********** -->
+<!-- ******** MODAL ****************** -->
 
 <div class="modal fade" id="main-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">{{modalTitle}}</h5>
-        
+        <h5 class="modal-title text-success" id="exampleModalLongTitle" [class.text-warning]="validErr == true">{{modalTitle}}</h5>
       </div>
       <div class="modal-body">
+        <ng-template [ngIf]='validErr == true'>
+          <p id="modal-text"><b><u>Required info missing :</u></b></p>
+        </ng-template>
         <p id="modal-text">{{modalText}}</p>
+        <ng-template [ngIf]='emailErr == true'>
+          <p id="modal-text">- Please enter a valid email-address</p>
+        </ng-template>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -72,5 +91,7 @@
     </div>
   </div>
 </div>
+
+<!-- ******** MODAL-END ************** -->
 
 

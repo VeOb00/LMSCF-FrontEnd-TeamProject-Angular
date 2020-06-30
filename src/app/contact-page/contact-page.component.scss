@@ -1,5 +1,10 @@
 @import '../../colors';
 
+.google-maps{
+    width: 100%;
+    height: 100%;
+}
+
 iframe{
     width: 100%;
     height: 100%;
@@ -9,15 +14,29 @@ form b{
     color: crimson;
 }
 
+label{
+    font-size: 80%;
+    font-style: italic;
+}
+
 input, textarea{
     resize: none;
-    outline: none;
+    outline: 0;
     box-shadow:none !important;
+    border:0px solid #ccc !important;
+    border-bottom: 2px solid #cccc !important;
+}
+
+input[formControlName=subject]{
+    border:1px solid #ccc !important;
+}
+
+textarea{
     border:1px solid #ccc !important;
 }
 
 button{
-    background-color: $accent-color2;
+    background-color: $dark-color;
 }
 
 #modal-text{
