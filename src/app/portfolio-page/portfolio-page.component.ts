@@ -8,10 +8,24 @@ import { photos } from './photos';
 })
 export class PortfolioPageComponent implements OnInit {
     photos = photos;
+    types: Set<string> = new Set();
+    allTypes: Set<string> = new Set();
 
-  constructor() { }
+  constructor() {
+      this.photos.forEach(photo => this.allTypes.add(photo.type));
+      this.types = new Set(this.allTypes);
+   }
 
   ngOnInit(): void {
   }
+
+  public setOneType(type: string) {
+      this.types.clear();
+      this.types.add(type);
+  }
+
+  public setAllTypes() {
+    this.types = new Set(this.allTypes);
+}
 
 }

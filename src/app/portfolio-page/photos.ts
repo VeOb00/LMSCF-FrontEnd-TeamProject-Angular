@@ -1,7 +1,8 @@
 export let photos: Array<Photography> = [];
+
 var options = { weekday: "short", year: "numeric", month: "long", day: "numeric" };
 
-class Photography {
+export class Photography {
     image: string;
     caption: string;
     dateTaken: string;

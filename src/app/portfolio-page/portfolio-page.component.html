@@ -1,18 +1,18 @@
-<!-- <div class="container">
-    <figure class="figure col-sm-6 col-md-4" *ngFor="let photo of photos ; index as portfolioPhotoId">
-        <div class="img-container">
-            <img src="{{photo.image}}" class="figure-img img-fluid" alt="...">
-        </div>
-        <figcaption class="figure-caption">
-            <p class="text-center text-uppercase mt-1 h5">{{photo.caption}}</p>
-            <p class="text-center small mt-0">{{photo.placeTaken}}</p>
-        </figcaption>
-    </figure>
-</div> -->
+<div class="container wrapper">
+    <ul class="nav justify-content-center mt-5 mb-3">
+        <li class="nav-item">
+            <a class="nav-link active" (click)="setAllTypes()">All</a>
+        </li>
+        <li class="nav-item" *ngFor="let type of allTypes">
+            <a class="nav-link text-capitalize" (click)="setOneType(type)">{{type}}</a>
+        </li>
+    </ul>
+</div>
+
 
 <div class="container-fluid">
     <div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
-        <figure class="figure col-sm-6 col-lg-3" *ngFor="let photo of photos ; index as portfolioPhotoId">
+        <figure class="figure col-sm-6 col-lg-3" *ngFor="let photo of photos | portfolioFilters:types ; index as portfolioPhotoId">
             <div class="container">
                 <img class="w-100" src="{{photo.image}}" alt="First slide" data-target="#carouselExample"
                     attr.data-slide-to="{{portfolioPhotoId}}">
@@ -35,17 +35,18 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div id="carouselExample" class="carousel slide"  data-interval="false">
+                <div id="carouselExample" class="carousel slide" data-interval="false">
                     <!-- <ol class="carousel-indicators">
                         <li data-target="#carouselExample" data-slide-to="portfolioPhotoId" class="active"
                             *ngFor="let photo of photos ; index as portfolioPhotoId"
                             [ngClass]="{'active': portfolioPhotoId == 0}"></li>
                     </ol> -->
                     <div class="carousel-inner">
-                        <div class="carousel-item" *ngFor="let photo of photos ; index as portfolioPhotoId"
+                        <div class="carousel-item" *ngFor="let photo of photos | portfolioFilters:types ; index as portfolioPhotoId"
                             [ngClass]="{'active': portfolioPhotoId == 0}">
                             <img class="d-block w-100" src="{{photo.image}}" alt="{{photo.caption}}">
-                            <p class="modal-title" id="exampleModalLongTitle"><span class="text-uppercase">{{photo.caption}}</span><br> 
+                            <p class="modal-title" id="exampleModalLongTitle"><span
+                                    class="text-uppercase">{{photo.caption}}</span><br>
                                 <small>{{photo.placeTaken}}</small></p>
                         </div>
                     </div>

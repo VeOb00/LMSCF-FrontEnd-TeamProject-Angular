@@ -9,6 +9,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { PortfolioFiltersPipe } from './portfolio-filters.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutPageComponent,
     ContactPageComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PortfolioFiltersPipe
   ],
   imports: [
     BrowserModule,
