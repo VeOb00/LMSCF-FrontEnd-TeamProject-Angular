@@ -29,7 +29,7 @@ export class ContactPageComponent implements OnInit {
       this.modalTitle = 'Success';
       this.modalText = 'Thank you for contacting us'
       var formInfo = this.contactInfo.value;
-      console.log(formInfo);
+      this.contactInfo.reset();
     }
     else{
 
@@ -38,19 +38,19 @@ export class ContactPageComponent implements OnInit {
       var formInfo = this.contactInfo.value;
 
 
-      if(formInfo.firstName === ''){
+      if(formInfo.firstName === '' || formInfo.firstName === null){
         this.modalText += '- First Name\n';
       }
-      if(formInfo.lastName === ''){
+      if(formInfo.lastName == '' || formInfo.lastName === null){
         this.modalText += '- Last Name\n';
       }
-      if(formInfo.email === ''){
+      if(formInfo.email == '' || formInfo.email === null){
         this.modalText += '- Email\n';
       }
-      if(formInfo.subject === ''){
+      if(formInfo.subject == '' || formInfo.subject === null){
         this.modalText += '- Subject\n';
       }
-      if(formInfo.message === ''){
+      if(formInfo.message == '' || formInfo.message === null){
         this.modalText += '- Message\n';
       }
 
