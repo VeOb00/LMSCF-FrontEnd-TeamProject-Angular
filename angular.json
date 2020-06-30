@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "T4PC"
+    }
+  },
+  "defaultProject": "T4PC",
+  "cli": {
+    "analytics": false
+  }
 }
