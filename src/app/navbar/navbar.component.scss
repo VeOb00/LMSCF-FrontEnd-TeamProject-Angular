@@ -9,3 +9,14 @@ a {
 a:hover {
     color: $hover-color
 };
+
+.navbar-toggler-icon .navbar-toggler {
+    border-color: transparent; 
+    
+};
+.navbar-toggler-icon .navbar-toggler .icon-bar {
+    background-color: black;
+};
+.navbar-toggler-icon .navbar-toggler .icon-bar:hover {
+    background-color: $hover-color; /* Changes toggle color on hover */
+};
