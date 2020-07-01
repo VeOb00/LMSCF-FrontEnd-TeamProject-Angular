@@ -25,6 +25,15 @@ img {
     height: 85vh;
 }
 
+a {
+    color: $dark-color;
+}
+a:hover {
+    color: $hover-color;
+}
+
+// ---------------------------- testiomonials
+
 .iconPrev, .iconNext {
     color: $dark-color;
 }
@@ -32,6 +41,7 @@ img {
 .testiomonials {
     color: $dark-color;
 }
+
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
