@@ -25,10 +25,20 @@ img {
     height: 85vh;
 }
 
+.gallery {
+    background-color: $light-color;
+}
+
+
+
+// .picContainer > img {
+//     object-fit: fill;
+// }
+
 a {
     color: $dark-color;
 }
-a:hover {
+a:hover, small:hover {
     color: $hover-color;
 }
 
@@ -42,6 +52,10 @@ a:hover {
     color: $dark-color;
 }
 
+.testiomonial {
+    width: 70vw;
+}
+
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
@@ -51,6 +65,7 @@ a:hover {
 .testimonialContent {
     width: 45rem;
     margin-top: 8vw;
+    text-align: center;
 }
 
 .avatar {
