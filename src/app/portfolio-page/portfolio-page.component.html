@@ -21,7 +21,7 @@
         <figure class="figure col-sm-6 col-lg-4"
             *ngFor="let photo of photos | portfolioFilters:types ; index as portfolioPhotoId">
             <div class="container">
-                <img class="w-100" src="{{photo.image}}" alt="First slide" data-target="#carouselExample"
+                <img class="w-100" src="{{photo.image}}" alt="{{photo.caption}}" data-target="#carouselExample"
                     attr.data-slide-to="{{portfolioPhotoId}}">
             </div>
             <figcaption class="figure-caption">
@@ -53,9 +53,9 @@
                             *ngFor="let photo of photos | portfolioFilters:types ; index as portfolioPhotoId"
                             [ngClass]="{'active': portfolioPhotoId == 0}">
                             <img class="d-block w-100" src="{{photo.image}}" alt="{{photo.caption}}">
-                            <p class="modal-title" id="exampleModalLongTitle"><span
+                            <!-- <p class="modal-title" id="exampleModalLongTitle"><span
                                     class="text-uppercase">{{photo.caption}}</span><br>
-                                <small>{{photo.placeTaken}}</small></p>
+                                <small>{{photo.placeTaken}}</small></p> -->
                         </div>
                     </div>
 
