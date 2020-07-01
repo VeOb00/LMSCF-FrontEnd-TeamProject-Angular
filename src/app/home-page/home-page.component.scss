@@ -21,3 +21,19 @@
 .carousel-control-prev-icon {
    filter: invert(1);
 }
+
+.testimonialContent {
+    width: 40rem;
+}
+
+.avatar {
+    width: 15rem;
+    height: 15rem;
+}
+
+.avatar > img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+
+}
