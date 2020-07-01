@@ -1,3 +1,6 @@
+@import '../../colors';
+
+
 .figure-img:hover {
     opacity: 0.9;
 }
@@ -5,3 +8,16 @@
 // .carousel-inner {
 //     height: 80vh;
 // }
+
+.iconPrev, .iconNext {
+    color: $dark-color;
+}
+
+.testiomonials {
+    color: $dark-color;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+   filter: invert(1);
+}
