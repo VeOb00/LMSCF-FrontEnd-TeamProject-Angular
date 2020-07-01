@@ -70,22 +70,22 @@
 <!-- ******** CONTAINER-END ********** -->
 <!-- ******** MODAL ****************** -->
 
-<div class="modal fade" id="main-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade text-center" id="main-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-success" id="exampleModalLongTitle" [class.text-warning]="validErr == true">{{modalTitle}}</h5>
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title text-success" id="exampleModalLongTitle" [class.text-warning]="validErr == true"><small>{{modalTitle}}</small></h5>
       </div>
       <div class="modal-body">
         <ng-template [ngIf]='validErr == true'>
-          <p id="modal-text"><b><u>Required info missing :</u></b></p>
+          <p id="modal-text" class="text-muted"><b><u>Required info missing :</u></b></p>
         </ng-template>
-        <p id="modal-text">{{modalText}}</p>
+        <p id="modal-text" class="text-muted"><i>{{modalText}}</i></p>
         <ng-template [ngIf]='emailErr == true'>
-          <p id="modal-text">- Please enter a valid email-address</p>
+          <p id="modal-text" class="text-muted"><i>- Please enter a valid email-address</i></p>
         </ng-template>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
