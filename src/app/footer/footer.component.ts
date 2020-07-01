@@ -10,6 +10,11 @@ export class FooterComponent implements OnInit {
   constructor() {
     this.projectName = "team4.photography";
   };
+
+  toTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   
 
   ngOnInit(): void {
