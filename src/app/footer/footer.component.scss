@@ -23,3 +23,21 @@ i:hover {
     margin-top: 7vw;
     margin-bottom: 5vw;
 }
+
+#relativeWrap{
+    position: relative;
+    width: 100%;
+}
+
+.topBtn{
+    position: absolute;
+    bottom: 1px;
+    right: 3%;
+    color: $accent-color2;
+    border: 1px solid #899878;
+}
+
+.topBtn:hover{
+    border: 1px solid black;
+    color: black;
+}
