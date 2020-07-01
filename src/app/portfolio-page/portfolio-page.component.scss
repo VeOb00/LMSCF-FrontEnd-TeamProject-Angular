@@ -4,7 +4,6 @@ $bootstrap-md: 768px;
 $bootstrap-lg: 992px;
 $bootstrap-xl: 1200px;
 
-
 #gallery {
 
   img {
@@ -21,7 +20,6 @@ $bootstrap-xl: 1200px;
   }
 }
 
-
 figure img:hover,
 a:hover {
   cursor: pointer;
@@ -34,7 +32,6 @@ a:hover {
 
 .carousel {
   height: 80vh;
-
 }
 
 .carousel .carousel-inner {
@@ -50,4 +47,8 @@ a:hover {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+.figure:hover {
+  opacity: 0.9;
 }

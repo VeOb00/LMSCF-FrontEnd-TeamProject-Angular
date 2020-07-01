@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-$dark-color: #3e4e50;
-$light-color: #f7f7f2;
-$accent-color1: #e4e6c3;
-$accent-color2: #899878;
+@import 'colors.scss';
 
-
+* {
+    color: $dark-color;
+}
