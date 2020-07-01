@@ -2,6 +2,22 @@
     opacity: 0.9;
 }
 
-// .carousel-inner {
-//     height: 80vh;
-// }
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel, .carousel-inner {
+    height: 90vh;
+}
+
+.carousel {
+    margin-top: -80px;
+    overflow: hidden;
+}
+
+.carousel img {
+    object-fit: cover;
+    object-position: center;
+    height: 90vh;
+}
