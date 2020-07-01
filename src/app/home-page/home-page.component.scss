@@ -56,6 +56,9 @@ a:hover, small:hover {
     width: 70vw;
 }
 
+.i {
+    color: #E77728;
+}
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
@@ -63,9 +66,9 @@ a:hover, small:hover {
 }
 
 .testimonialContent {
-    width: 45rem;
+    max-width: 45rem;
     margin-top: 8vw;
-    text-align: center;
+    // text-align: center;
 }
 
 .avatar {
