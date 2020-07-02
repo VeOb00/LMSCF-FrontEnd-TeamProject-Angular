@@ -9,13 +9,21 @@ $bootstrap-xl: 1200px;
   img {
     height: 75vw;
     object-fit: cover;
-
+    
     @media (min-width: $bootstrap-sm) {
-      height: 35vw;
+      height: 25vw;
+    }
+
+    @media (min-width: $bootstrap-md) {
+        height: 30vw;
     }
 
     @media (min-width: $bootstrap-lg) {
-      height: 20vw;
+      height: 22.5vw;
+    }
+
+    @media(min-width: 1600px) {
+        height: 16vw;
     }
   }
 }
