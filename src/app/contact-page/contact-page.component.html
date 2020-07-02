@@ -74,7 +74,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header justify-content-center">
-        <h5 class="modal-title text-success" id="exampleModalLongTitle" [class.text-warning]="validErr == true"><small>{{modalTitle}}</small></h5>
+        <h5 class="modal-title text-success" id="exampleModalLongTitle" [class.errorColor]="validErr == true">{{modalTitle}}</h5>
       </div>
       <div class="modal-body">
         <ng-template [ngIf]='validErr == true'>
